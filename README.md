@@ -6,7 +6,7 @@
 
 ## 🧶 Overview
 
-*Sinople* is a narrative environment for layered expression. It's named after a heraldic pigment once red, now green—an emblem of contradiction and agency. This theme transforms WordPress into a mist-soaked loom for thoughts, threads, and constructs. CSS-first by design, it privileges performance, readability, and symbolic structure while embracing radical inclusivity and decentralized publishing.
+*Sinople* is a narrative environment for layered expression. It's named after a heraldic pigment once red, now green - an emblem of contradiction and agency. This theme transforms WordPress into a mist-soaked loom for thoughts, threads, and constructs. CSS-first by design, it privileges performance, readability, and symbolic structure while embracing radical inclusivity and decentralized publishing.
 
 ---
 
@@ -92,15 +92,18 @@ These layers are modular and can be added or extended as the journal's semantic 
 🚀 Getting Started
 Clone into your theme directory:
 
+<pre>
+
 bash
 git clone https://github.com/yourusername/sinople-theme.git
-Then:
 
-Activate via WordPress Admin
+</pre>
 
-Install IndieWeb plugins: Webmention, Post Kinds, IndieAuth
+Then: 
 
-Customize spans via CSS modules and semantic templates
+- Activate via WordPress Admin  
+- Install IndieWeb plugins: Webmention, Post Kinds, IndieAuth  
+- Customize spans via CSS modules and semantic templates
 
 ♿ Accessibility Commitment
 Sinople is built with care for all modes of reading:
@@ -115,7 +118,7 @@ Sinople is built with care for all modes of reading:
 
 ✅ Semantic hierarchy and visible focus indicators
 
-Accessibility is not an afterthought—it’s woven into the theme’s voice.
+Accessibility is not an afterthought - it’s woven into the theme’s voice.
 
 🪡 Author
 Crafted with quiet resistance and stitched agency by Jonathan Inspired by mist, mythos, and memory
