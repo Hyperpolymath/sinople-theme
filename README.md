@@ -70,86 +70,55 @@ sinople-theme/
 </pre>
 
 📜 Licensing
-GPL v3 for all code: open-source, remixable, and ethically grounded.
+GPL v3 for all code — open-source, remixable, and ethically grounded
 
-CC BY 4.0 for narrative, poetic, or visual assets unless otherwise stated.
+CC BY 4.0 for narrative, poetic, or visual assets (unless otherwise stated)
 
-Ontological data (sinople.ttl, JSON-LD) may carry dual license for reuse clarity.
+Dual licensing for ontological data (sinople.ttl, metadata.jsonld) to clarify reuse in structured or linked data contexts
 
 💬 Semantic & Ontological Notes
-Sinople embraces structured data as symbolic artifact. This includes:
+Sinople embraces structured data as symbolic artifact. Each span may include:
 
-JSON-LD blocks for posts, personas, and glosses using Article, Person, and custom types.
+🔗 JSON-LD blocks using Article, Person, or custom types
 
-Open Graph meta tags to aid social previews (og:title, og:image, etc.)
+🖼️ Open Graph meta tags to enrich social previews (og:title, og:image, etc.)
 
-Optional RDFa layer to annotate in-page entities, particularly glosses and threaded archives.
+🧵 Optional RDFa inline markup for glosses and threaded constructs
 
-Future VoID and OWL support for expressing constructs as Linked Data.
+🧬 Future VoID and OWL support to publish symbolic entities as Linked Data
 
-These layers are modular and can be added gradually without disturbing the theme’s core weave.
+These layers are modular and can be added or extended as the journal's semantic weave evolves.
 
 🚀 Getting Started
-Clone into wp-content/themes/:
-🚀 Getting Started
-Clone into wp-content/themes/:
+Clone into your theme directory:
 
-<pre>
-
-```bash
+bash
 git clone https://github.com/yourusername/sinople-theme.git
-Activate via WP Admin
+Then:
 
-</pre>
-  
-Install IndieWeb plugins (Webmention, Post Kinds, IndieAuth)
+Activate via WordPress Admin
+
+Install IndieWeb plugins: Webmention, Post Kinds, IndieAuth
 
 Customize spans via CSS modules and semantic templates
 
 ♿ Accessibility Commitment
 Sinople is built with care for all modes of reading:
 
-Screen reader-friendly
+✅ Screen reader–friendly
 
-Keyboard navigable
+✅ Keyboard navigable
 
-Motion-respecting
+✅ Motion-respecting
 
-Braille-compatible flow
+✅ Braille-compatible flow
 
-Semantic hierarchy and visible focus at all stages
+✅ Semantic hierarchy and visible focus indicators
 
-Accessibility is not an afterthought—it’s woven into the theme's voice.
+Accessibility is not an afterthought—it’s woven into the theme’s voice.
 
 🪡 Author
 Crafted with quiet resistance and stitched agency by Jonathan Inspired by mist, mythos, and memory
 
 🌐 Contributions
 Contributions welcome—be they code, glosses, critiques, or semantic annotations. No roadmap, only threads. Follow one.
-git clone https://github.com/yourusername/sinople-theme.git
-Activate via WP Admin
-
-Install IndieWeb plugins (Webmention, Post Kinds, IndieAuth)
-
-Customize spans via CSS modules and semantic templates
-
-♿ Accessibility Commitment
-Sinople is built with care for all modes of reading:
-
-Screen reader-friendly
-
-Keyboard navigable
-
-Motion-respecting
-
-Braille-compatible flow
-
-Semantic hierarchy and visible focus at all stages
-
-Accessibility is not an afterthought - it’s woven into the theme's voice.
-
-🪡 Author
-Crafted with quiet resistance and stitched agency by Jonathan Inspired by mist, mythos, and memory
-
-🌐 Contributions
-Contributions welcome - be they code, glosses, critiques, or semantic annotations. No roadmap, only threads. Follow one.
