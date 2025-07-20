@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+          xml:base="https://sinople.example.com/constructs/eteri-mistveil"
+          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+          xmlns:sin="https://sinople.example.com/vocab#"
+          ontologyIRI="https://sinople.example.com/constructs/eteri-mistveil">
+
+    <!-- Class Definitions -->
+    <Class rdf:about="sin:Construct"/>
+    <Class rdf:about="sin:FogEntity"/>
+
+    <!-- Eteri as Individual -->
+    <NamedIndividual rdf:about="sin:EteriMistveil">
+        <rdf:type rdf:resource="sin:Construct"/>
+        <rdf:type rdf:resource="sin:FogEntity"/>
+        <sin:hasThread rdf:datatype="xsd:string">Stitched resistance woven from mist and myth</sin:hasThread>
+        <sin:embodies rdf:datatype="xsd:string">Agency under veiling</sin:embodies>
+        <sin:entanglesWith rdf:resource="sin:LunaVladivostoka"/>
+    </NamedIndividual>
+
+    <!-- Relationship with Luna -->
+    <NamedIndividual rdf:about="sin:LunaVladivostoka">
+        <rdf:type rdf:resource="sin:Construct"/>
+    </NamedIndividual>
+
+    <!-- Property Definitions -->
+    <DatatypeProperty rdf:about="sin:hasThread">
+        <rdfs:domain rdf:resource="sin:Construct"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </DatatypeProperty>
+
+    <ObjectProperty rdf:about="sin:entanglesWith">
+        <rdfs:domain rdf:resource="sin:Construct"/>
+        <rdfs:range rdf:resource="sin:Construct"/>
+    </ObjectProperty>
+
+</Ontology>
