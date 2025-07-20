@@ -43,6 +43,8 @@
 
 ---
 
+<pre>
+  
 ## 🗂 Structure
 
 ```plaintext
@@ -65,3 +67,87 @@ sinople-theme/
 ├── LICENSE            # GPL v3
 └── README.md          # This file
 
+</pre>
+
+📜 Licensing
+GPL v3 for all code: open-source, remixable, and ethically grounded.
+
+CC BY 4.0 for narrative, poetic, or visual assets unless otherwise stated.
+
+Ontological data (sinople.ttl, JSON-LD) may carry dual license for reuse clarity.
+
+💬 Semantic & Ontological Notes
+Sinople embraces structured data as symbolic artifact. This includes:
+
+JSON-LD blocks for posts, personas, and glosses using Article, Person, and custom types.
+
+Open Graph meta tags to aid social previews (og:title, og:image, etc.)
+
+Optional RDFa layer to annotate in-page entities, particularly glosses and threaded archives.
+
+Future VoID and OWL support for expressing constructs as Linked Data.
+
+These layers are modular and can be added gradually without disturbing the theme’s core weave.
+
+🚀 Getting Started
+Clone into wp-content/themes/:
+🚀 Getting Started
+Clone into wp-content/themes/:
+
+<pre>
+bash
+git clone https://github.com/yourusername/sinople-theme.git
+Activate via WP Admin
+</pre>pre>
+  
+Install IndieWeb plugins (Webmention, Post Kinds, IndieAuth)
+
+Customize spans via CSS modules and semantic templates
+
+♿ Accessibility Commitment
+Sinople is built with care for all modes of reading:
+
+Screen reader-friendly
+
+Keyboard navigable
+
+Motion-respecting
+
+Braille-compatible flow
+
+Semantic hierarchy and visible focus at all stages
+
+Accessibility is not an afterthought—it’s woven into the theme's voice.
+
+🪡 Author
+Crafted with quiet resistance and stitched agency by Jonathan Inspired by mist, mythos, and memory
+
+🌐 Contributions
+Contributions welcome—be they code, glosses, critiques, or semantic annotations. No roadmap, only threads. Follow one.
+git clone https://github.com/yourusername/sinople-theme.git
+Activate via WP Admin
+
+Install IndieWeb plugins (Webmention, Post Kinds, IndieAuth)
+
+Customize spans via CSS modules and semantic templates
+
+♿ Accessibility Commitment
+Sinople is built with care for all modes of reading:
+
+Screen reader-friendly
+
+Keyboard navigable
+
+Motion-respecting
+
+Braille-compatible flow
+
+Semantic hierarchy and visible focus at all stages
+
+Accessibility is not an afterthought - it’s woven into the theme's voice.
+
+🪡 Author
+Crafted with quiet resistance and stitched agency by Jonathan Inspired by mist, mythos, and memory
+
+🌐 Contributions
+Contributions welcome - be they code, glosses, critiques, or semantic annotations. No roadmap, only threads. Follow one.
