@@ -1,0 +1,33 @@
+# Ignore everything except wp-content
+/*
+!wp-content/
+
+# Ignore everything in wp-content except themes
+wp-content/*
+!wp-content/themes/
+
+# Ignore all themes except Sinople
+wp-content/themes/*
+!wp-content/themes/sinople-theme/
+
+# Ignore node modules and build artifacts
+node_modules/
+dist/
+*.log
+*.sql
+*.sqlite
+
+# Ignore OS and editor files
+.DS_Store
+ehthumbs.db
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+.idea/
+.vscode/
+
+# Track these files
+!.gitignore
+!README.md
+!LICENSE
+!composer.json
