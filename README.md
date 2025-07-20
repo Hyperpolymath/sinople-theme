@@ -95,10 +95,12 @@ Clone into wp-content/themes/:
 Clone into wp-content/themes/:
 
 <pre>
-bash
+
+```bash
 git clone https://github.com/yourusername/sinople-theme.git
 Activate via WP Admin
-</pre>pre>
+
+</pre>
   
 Install IndieWeb plugins (Webmention, Post Kinds, IndieAuth)
 
