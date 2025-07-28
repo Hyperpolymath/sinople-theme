@@ -1,14 +1,1 @@
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "@id": "https://sinople.example.com/field-notes/fog-breathing",
-  "headline": "Fog Breathing",
-  "datePublished": "2025-07-21",
-  "author": {
-    "@type": "Person",
-    "name": "Eteri Mistveil",
-    "@id": "https://sinople.example.com/constructs/eteri-mistveil"
-  },
-  "keywords": ["fog", "thread", "agency", "veil"],
-  "description": "A field note capturing the moment mist stitched memory to movement—centered on Eteri's symbolic appearance."
-}
+{ JSON block for fog note }
