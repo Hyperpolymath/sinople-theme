@@ -29,5 +29,6 @@ Thumbs.db
 # Track these files
 !.gitignore
 !README.md
+!CLAUDE.md
 !LICENSE
 !composer.json
