@@ -1,23 +1,27 @@
-# Ignore everything except wp-content
-/*
-!wp-content/
-
-# Ignore everything in wp-content except themes
-wp-content/*
-!wp-content/themes/
-
-# Ignore all themes except Sinople
-wp-content/themes/*
-!wp-content/themes/sinople-theme/
-
-# Ignore node modules and build artifacts
+# Node modules and dependencies
 node_modules/
-dist/
-*.log
-*.sql
-*.sqlite
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
-# Ignore OS and editor files
+# Build artifacts
+dist/
+build/
+assets/css/min/
+assets/js/dist/
+assets/images/optimized/
+*.map
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.wasm
+
+# IDE and editor files
 .DS_Store
 ehthumbs.db
 Thumbs.db
@@ -25,6 +29,60 @@ Thumbs.db
 *.sublime-workspace
 .idea/
 .vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+
+# Database
+*.sql
+*.sqlite
+*.db
+
+# WordPress specific
+wp-config.php
+.htaccess
+sitemap.xml
+sitemap.xml.gz
+
+# Cache and temporary files
+.cache/
+.temp/
+.tmp/
+*.tmp
+
+# OS files
+.DS_Store
+.Spotlight-V100
+.Trashes
+
+# Rust/WASM
+target/
+Cargo.lock
+
+# ReScript
+lib/
+.bsb.lock
+.merlin
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Container files
+.containerignore
+
+# Security
+*.pem
+*.key
+*.crt
 
 # Track these files
 !.gitignore
@@ -32,3 +90,47 @@ Thumbs.db
 !CLAUDE.md
 !LICENSE
 !composer.json
+!package.json
+!Containerfile
+!docker-compose*.yml
+!Cargo.toml
+!bsconfig.json
+!tsconfig.json
+!.eslintrc.json
+!.stylelintrc.json
+!.prettierrc.json
+
+# Track source directories
+!assets/
+!templates/
+!semantic/
+!content/
+!entries/
+!docs/
+!tests/
+!scripts/
+!inc/
+
+# Track PHP files
+!*.php
+
+# Track SCSS source files
+!assets/scss/
+!assets/scss/**/*.scss
+
+# Track JS source files
+!assets/js/src/
+!assets/js/src/**/*.ts
+!assets/js/src/**/*.js
+
+# Track WASM source
+!assets/wasm/
+!assets/wasm/**/*.rs
+
+# Track ReScript source
+!assets/rescript/
+!assets/rescript/**/*.res
+
+# Track configuration files
+!config/
+!config/**/*
