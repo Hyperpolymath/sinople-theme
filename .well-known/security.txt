@@ -1,0 +1,20 @@
+# RFC 9116 compliant security.txt
+# https://securitytxt.org/
+
+Contact: mailto:security@example.com
+Contact: https://github.com/hyperpolymath/sinople-theme/security/advisories/new
+Expires: 2026-01-22T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://example.com/.well-known/security.txt
+
+# Encryption
+# Encryption: https://example.com/pgp-key.txt
+
+# Acknowledgments
+Acknowledgments: https://github.com/hyperpolymath/sinople-theme/blob/main/SECURITY.md#hall-of-fame
+
+# Policy
+Policy: https://github.com/hyperpolymath/sinople-theme/blob/main/SECURITY.md
+
+# Hiring
+# Hiring: https://example.com/jobs

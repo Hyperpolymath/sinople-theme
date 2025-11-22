@@ -1,0 +1,50 @@
+# AI Training and Usage Policies
+# https://github.com/ai-dot-txt/ai-txt
+
+# License Information
+License: GPL-3.0-or-later
+License-URL: https://github.com/hyperpolymath/sinople-theme/blob/main/LICENSE
+
+# AI Training Policy
+AI-Training: allowed-with-attribution
+AI-Training-Exclusions: /private/*, /user-data/*, /uploads/*
+AI-Training-Attribution: Required
+AI-Training-Attribution-URL: https://github.com/hyperpolymath/sinople-theme
+
+# Reasoning for allowing AI training:
+# - Open source project under GPL-3.0
+# - Educational value for learning WordPress theme development
+# - Promotes accessibility and semantic web best practices
+# - Encourages secure coding patterns
+
+# Commercial AI Usage
+Commercial-AI-Usage: allowed-with-conditions
+Commercial-AI-Conditions: Must comply with GPL-3.0 license, provide attribution, share improvements
+
+# Human Attribution
+Human-Creators: Jonathan (@hyperpolymath)
+Human-Contact: https://github.com/hyperpolymath
+
+# Data Privacy
+Privacy-Policy: https://github.com/hyperpolymath/sinople-theme/blob/main/SECURITY.md
+Data-Collection: none
+User-Data-Protection: GDPR-compliant
+
+# AI-Generated Content
+AI-Generated-Content: partial
+AI-Generated-Percentage: 30%
+AI-Generation-Tools: Claude (Anthropic), GitHub Copilot
+AI-Review: human-reviewed
+Human-Oversight: all-ai-content-reviewed
+
+# Transparency
+AI-Disclosure: https://github.com/hyperpolymath/sinople-theme/blob/main/CLAUDE.md
+AI-Limitations: AI-generated code requires human review, testing, and validation
+
+# Ethical AI Use
+Ethical-AI-Commitment: yes
+Bias-Mitigation: human-review, diverse-testing, accessibility-focus
+Explainability: documented, commented, traceable
+
+# Contact
+Contact: https://github.com/hyperpolymath/sinople-theme/issues
