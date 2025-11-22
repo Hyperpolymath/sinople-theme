@@ -36,6 +36,11 @@ require_once SINOPLE_PATH . '/inc/void-integration.php';
 require_once SINOPLE_PATH . '/inc/modern-features.php';
 require_once SINOPLE_PATH . '/inc/serialization.php';
 
+// First-class serialization formats
+require_once SINOPLE_PATH . '/inc/ndjson-feed.php';
+require_once SINOPLE_PATH . '/inc/flatbuffers.php';
+require_once SINOPLE_PATH . '/inc/capnproto.php';
+
 /**
  * Theme setup
  */
