@@ -14,7 +14,7 @@ updates:
       - "dependencies"
       - "npm"
     commit-message:
-      prefix: "npm"
+      prefix: "deno"
       include: "scope"
     ignore:
       # Ignore major version updates for breaking changes
