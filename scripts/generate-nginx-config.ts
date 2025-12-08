@@ -1,19 +1,29 @@
-#!/usr/bin/env node
+#!/usr/bin/env -S deno run --allow-read --allow-write --allow-env
 
 /**
  * Generate optimized Nginx configuration
  * with security headers and caching rules
+ *
+ * @module
  */
 
-const fs = require('fs');
-const path = require('path');
+import { join, dirname } from "@std/path";
+import { ensureDir } from "@std/fs";
 
-const config = {
-  serverName: process.env.SERVER_NAME || 'localhost',
-  sslCert: process.env.SSL_CERT || '/etc/nginx/ssl/cert.pem',
-  sslKey: process.env.SSL_KEY || '/etc/nginx/ssl/key.pem',
-  enableHTTP2: process.env.ENABLE_HTTP2 !== 'false',
-  enableHTTP3: process.env.ENABLE_HTTP3 === 'true',
+interface Config {
+  serverName: string;
+  sslCert: string;
+  sslKey: string;
+  enableHTTP2: boolean;
+  enableHTTP3: boolean;
+}
+
+const config: Config = {
+  serverName: Deno.env.get("SERVER_NAME") || "localhost",
+  sslCert: Deno.env.get("SSL_CERT") || "/etc/nginx/ssl/cert.pem",
+  sslKey: Deno.env.get("SSL_KEY") || "/etc/nginx/ssl/key.pem",
+  enableHTTP2: Deno.env.get("ENABLE_HTTP2") !== "false",
+  enableHTTP3: Deno.env.get("ENABLE_HTTP3") === "true",
 };
 
 const nginxConfig = `
@@ -137,10 +147,10 @@ http {
 
     # HTTPS server
     server {
-        listen 443 ssl${config.enableHTTP2 ? ' http2' : ''};
-        listen [::]:443 ssl${config.enableHTTP2 ? ' http2' : ''};
-        ${config.enableHTTP3 ? 'listen 443 quic reuseport;' : ''}
-        ${config.enableHTTP3 ? 'listen [::]:443 quic reuseport;' : ''}
+        listen 443 ssl${config.enableHTTP2 ? " http2" : ""};
+        listen [::]:443 ssl${config.enableHTTP2 ? " http2" : ""};
+        ${config.enableHTTP3 ? "listen 443 quic reuseport;" : ""}
+        ${config.enableHTTP3 ? "listen [::]:443 quic reuseport;" : ""}
 
         server_name ${config.serverName};
         root /var/www/html;
@@ -150,7 +160,7 @@ http {
         ssl_certificate ${config.sslCert};
         ssl_certificate_key ${config.sslKey};
 
-        ${config.enableHTTP3 ? "# HTTP/3\n        add_header Alt-Svc 'h3=\":443\"; ma=86400' always;" : ''}
+        ${config.enableHTTP3 ? "# HTTP/3\n        add_header Alt-Svc 'h3=\":443\"; ma=86400' always;" : ""}
 
         # Security headers
         include /etc/nginx/security-headers.conf;
@@ -236,13 +246,6 @@ http {
 }
 `;
 
-// Write configuration
-const outputPath = path.join(__dirname, '..', 'config', 'nginx-prod.conf');
-fs.writeFileSync(outputPath, nginxConfig.trim());
-
-console.log(`✓ Nginx configuration generated: ${outputPath}`);
-
-// Generate security headers include file
 const securityHeaders = `
 # Security headers
 add_header X-Frame-Options "SAMEORIGIN" always;
@@ -258,7 +261,25 @@ add_header Cross-Origin-Resource-Policy "same-origin" always;
 add_header Expect-CT "max-age=86400, enforce" always;
 `;
 
-const secHeadersPath = path.join(__dirname, '..', 'config', 'security-headers.conf');
-fs.writeFileSync(secHeadersPath, securityHeaders.trim());
+async function main(): Promise<void> {
+  const scriptDir = dirname(new URL(import.meta.url).pathname);
+  const configDir = join(scriptDir, "..", "config");
 
-console.log(`✓ Security headers configuration generated: ${secHeadersPath}`);
+  // Ensure config directory exists
+  await ensureDir(configDir);
+
+  // Write Nginx configuration
+  const nginxPath = join(configDir, "nginx-prod.conf");
+  await Deno.writeTextFile(nginxPath, nginxConfig.trim());
+  console.log(`\u2713 Nginx configuration generated: ${nginxPath}`);
+
+  // Write security headers
+  const secHeadersPath = join(configDir, "security-headers.conf");
+  await Deno.writeTextFile(secHeadersPath, securityHeaders.trim());
+  console.log(`\u2713 Security headers configuration generated: ${secHeadersPath}`);
+}
+
+// Run main
+if (import.meta.main) {
+  main();
+}
