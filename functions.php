@@ -41,6 +41,10 @@ require_once SINOPLE_PATH . '/inc/ndjson-feed.php';
 require_once SINOPLE_PATH . '/inc/flatbuffers.php';
 require_once SINOPLE_PATH . '/inc/capnproto.php';
 
+// php-aegis security integration
+require_once SINOPLE_PATH . '/inc/aegis-integration.php';
+require_once SINOPLE_PATH . '/inc/turtle-output.php';
+
 /**
  * Theme setup
  */

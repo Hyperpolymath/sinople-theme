@@ -28,8 +28,15 @@
   },
   "require": {
     "php": ">=8.1",
-    "composer/installers": "^2.2"
+    "composer/installers": "^2.2",
+    "hyperpolymath/php-aegis": "^0.1"
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/hyperpolymath/php-aegis"
+    }
+  ],
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
     "phpunit/phpunit": "^10.5",
@@ -96,7 +103,9 @@
       "inc/flatbuffers.php",
       "inc/capnproto.php",
       "inc/spans.php",
-      "inc/taxonomies.php"
+      "inc/taxonomies.php",
+      "inc/aegis-integration.php",
+      "inc/turtle-output.php"
     ]
   },
   "autoload-dev": {
